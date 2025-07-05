@@ -12,6 +12,7 @@
             font-family: 'Montserrat', sans-serif;
             background-color: #f9f9fc;
         }
+
         .profile-image {
             width: 700px;
             height: 790px;
@@ -29,6 +30,7 @@
             position: relative;
             overflow: hidden;
         }
+
         .profile-image::after {
             content: '';
             position: absolute;
@@ -39,12 +41,14 @@
             background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
             z-index: 1;
         }
+
         .profile-image-content {
             position: relative;
             z-index: 2;
             padding: 1.5rem;
             width: 100%;
         }
+
         @media (max-width: 768px) {
             .profile-image {
                 width: 100%;
@@ -55,7 +59,7 @@
 </head>
 <body>
     <!-- About Me Content -->
-<section class="py-8 md:py-12 px-6 md:px-12 bg-[#f9f9fc]">
+    <section class="py-8 md:py-12 px-6 md:px-12 bg-[#f9f9fc]">
         <div class="max-w-7xl mx-auto">            
             <div class="flex flex-col md:flex-row items-start gap-12">
                 <!-- Bio Content -->
@@ -65,15 +69,15 @@
                     <div class="mb-10">
                         <h3 class="text-2xl font-semibold mb-6">What I do best:</h3>
                         <ul class="space-y-4">
-                            <li class="flex items-start bg-white p-4 rounded-lg shadow-sm">
+                            <li class="flex items-start bg-white p-4 rounded-lg shadow-sm transform transition duration-300 hover:scale-105 hover:shadow-md">
                                 <span class="text-2xl mr-4">📝</span>
                                 <span class="text-lg">Build content strategies that convert</span>
                             </li>
-                            <li class="flex items-start bg-white p-4 rounded-lg shadow-sm">
+                            <li class="flex items-start bg-white p-4 rounded-lg shadow-sm transform transition duration-300 hover:scale-105 hover:shadow-md">
                                 <span class="text-2xl mr-4">🎉</span>
                                 <span class="text-lg">Plan events that leave a lasting impression</span>
                             </li>
-                            <li class="flex items-start bg-white p-4 rounded-lg shadow-sm">
+                            <li class="flex items-start bg-white p-4 rounded-lg shadow-sm transform transition duration-300 hover:scale-105 hover:shadow-md">
                                 <span class="text-2xl mr-4">🚀</span>
                                 <span class="text-lg">Turn creative concepts into real results</span>
                             </li>
@@ -83,15 +87,15 @@
                     <div class="mb-10">
                         <h3 class="text-2xl font-semibold mb-6">I lead with:</h3>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                            <div class="bg-white p-6 rounded-lg shadow-sm text-center transform transition duration-300 hover:scale-105 hover:shadow-md">
                                 <span class="text-3xl block mb-3">✨</span>
                                 <span class="text-lg font-medium">Authenticity</span>
                             </div>
-                            <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                            <div class="bg-white p-6 rounded-lg shadow-sm text-center transform transition duration-300 hover:scale-105 hover:shadow-md">
                                 <span class="text-3xl block mb-3">🎯</span>
                                 <span class="text-lg font-medium">Intentionality</span>
                             </div>
-                            <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                            <div class="bg-white p-6 rounded-lg shadow-sm text-center transform transition duration-300 hover:scale-105 hover:shadow-md">
                                 <span class="text-3xl block mb-3">🎨</span>
                                 <span class="text-lg font-medium">Creativity</span>
                             </div>
@@ -102,35 +106,18 @@
                         <p class="text-xl font-medium">
                             Have a story to tell?
                         </p>
-                        <a href="https://calendly.com/teslacadena/one-on-one-chat" class="inline-block mt-4 px-6 py-3 bg-[#594be5] text-white rounded-lg font-medium hover:bg-[#594be5]/90 transition">Get in Touch</a>
+                        <a href="https://calendly.com/teslacadena/one-on-one-chat" class="inline-block mt-4 px-6 py-3 bg-[#594be5] text-white rounded-lg font-medium transform transition duration-300 hover:scale-105 hover:bg-[#594be5]/90">
+                            Get in Touch
+                        </a>
                     </div>
                 </div>
                 
-            <!-- Photo - Non-clickable without text overlay -->
-<div class="w-full md:w-1/2 flex justify-center md:justify-end order-1 md:order-2 mb-8 md:mb-0">
-    <div class="profile-image"></div>
-</div>
+                <!-- Photo - Non-clickable without text overlay -->
+                <div class="w-full md:w-1/2 flex justify-center md:justify-end order-1 md:order-2 mb-8 md:mb-0">
+                    <div class="profile-image"></div>
+                </div>
+            </div>
         </div>
     </section>
-    <script>
-        // Mobile menu toggle
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuButton = document.querySelector('nav button');
-            const menuItems = document.querySelector('nav div.hidden');
-            
-            menuButton.addEventListener('click', function() {
-                menuItems.classList.toggle('hidden');
-                menuItems.classList.toggle('flex');
-                menuItems.classList.toggle('flex-col');
-                menuItems.classList.toggle('absolute');
-                menuItems.classList.toggle('top-16');
-                menuItems.classList.toggle('right-6');
-                menuItems.classList.toggle('bg-white');
-                menuItems.classList.toggle('p-4');
-                menuItems.classList.toggle('rounded-lg');
-                menuItems.classList.toggle('shadow-lg');
-            });
-        });
-    </script>
 </body>
 </html>
